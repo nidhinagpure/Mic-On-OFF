@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg-Non-Veg</title>
+</head>
+<style>
+    .body{
+        background-color: #ffe0b3;}
+
+    .food-Container {
+        border: 2px #fcf0f0 solid;
+        width: 450px;
+        margin: 6% auto;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 2px grey;
+    }
+
+    .food-titele {
+        font-size: 36px;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .food-Image {
+        height: 320px;
+        width: 320px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .btn-Container {
+        display: block;
+        margin: 40px 28px;
+    }
+
+    .btn-Non {
+        padding: 6px 26px 6px 26px;
+        width: 50%px;
+        align-items: center;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(113, 113, 242);
+        color: white;
+        margin-right: 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn-Veg {
+        padding: 6px 6px;
+        font-size: 20px;
+        width: 46%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(50, 240, 50);
+        color: white;
+        margin-left: 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: none;
+    }
+</style>
+
+<body class="body">
+    <div class="food-Container" id="container">
+        <h1 class="food-titele" id="heading">Choose Food 🍴</h1>
+        <img src="./think.jpeg" alt="food-Image" class="food-Image" id="image">
+
+        <div class="btn-Container">
+            <button class="btn-Non" onclick="Non()">Nonvegitraian</button>
+            <button class="btn-Veg" onclick="Veg()">Vegitraian</button>
+        </div>
+    </div> 
+
+</body>
+   <script>
+       function Veg() {
+          const nonFood = document.getElementById("image");
+          nonFood.src ="./veg.jpg";
+          const containers = document.getElementById("container");
+          containers.style.backgroundColor ='#29a329';
+          const headingFood = document.getElementById("heading");
+          headingFood.innerText="Vegitraian-Food"
+
+       }
+       function Non() {
+        const vegFood = document.getElementById("image");
+        vegFood.src="./non-veg.jpg";
+        const containers = document.getElementById("container");
+        containers.style.backgroundColor='#003d99';
+        const headingFood = document.getElementById("heading");
+        headingFood.innerText="Non-Vegitraian"
+        headingFood.style.color='#ffffff'
+       }
+   </script>
+</html>
