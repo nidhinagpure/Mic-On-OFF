@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mic-On-Off</title>
+</head>
+
+<style>
+    body {
+        background-color: #e0e0d1;
+    }
+
+    .mic-Container {
+        width: 300px;
+        border: black 2px solid;
+        margin: 10px auto;
+        margin-top: 60px;
+        background-color: #ccccb3;
+    }
+
+    .Mic-Heading {
+        text-align: center;
+        font-size: 34px;
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: underline;
+    }
+
+    .mic-Image {
+        height: 260px;
+        width: 260px;
+        margin: 6px 24px;
+    }
+
+    .btn-Container {
+        margin: 20px 36px;
+        padding: 10px;
+    }
+
+    .btn-On {
+        font-size: 24px;
+        padding: 3px 30px 3px 30px;
+        text-align: center;
+        background-color: rgb(247, 236, 236);
+        color: black;
+        cursor: pointer;
+        border-radius: 3px;
+        border: none;
+    }
+
+    .btn-Off {
+        font-size: 24px;
+        padding: 3px 30px 3px 30px;
+        text-align: center;
+        background-color: rgb(84, 74, 74);
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 10px;
+        border: none;
+    }
+</style>
+
+<body class="body">
+
+    <div class="mic-Container">
+
+        <h1 class="Mic-Heading" id="Mic-Name">Mic-On-Off </h1>
+        <img src="./../mic-On.png" alt="mic" class="mic-Image" id="image-Mic">
+
+        <div class="btn-Container">
+            <button class="btn-Off"  onclick="Off()">Off</button>
+            <button class="btn-On" onclick="On()">On</button>
+        </div>
+    </div>
+
+</body>
+      <script>
+        
+        function Off(){
+           const imageELement = document.getElementById("image-Mic");
+           imageELement.src ="./../mic-off.png";
+        }
+
+        function On(){
+            const imageELements = document.getElementById("image-Mic");
+            imageELements.src = "./../mic-On.png"; 
+        }
+
+
+      </script>
+</html>
